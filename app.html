@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Font for Darker Grotesque -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/439320a6ee.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <title>App</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="header">
+      <h1>Simplist</h1>
+      <ul>
+        <li><a href="#">App</a></li>
+        <li><a href="#">About</a></li>
+      </ul>
+    </nav>
+    <!-- Main -->
+    <main>
+      <!-- Search box -->
+      <section class="search-box">
+        <div class="search-bar">
+          <label for="item-search" class="visually-hidden">Search</label>
+          <input
+            type="search"
+            id="item-search"
+            name="item-search"
+            placeholder="Search..."
+          />
+          <button type="submit" class="glass-icon">
+            <i class="fa fa-search"></i>
+          </button>
+        </div>
+        <div class="tag-group">
+            <button id="plus-btn">+</button>
+            <button>#school</li>
+            <button>#work</li>
+            <button>#fun</li>
+        </div>
+      </section>
+
+      <!-- Intro section -->
+      <section class="intro hidden">
+        <div class="container">
+          <div class="details">
+            <h2>Create your first item!</h2>
+            <!-- <div class="steps"> -->
+              <p>
+                  You're one step closer to making the <strong>simplist</strong> todo list you've ever
+                  made! First click the add icon below
+              </p>
+              <div class="checkbox-list">
+                <div>
+                  <label for="add-new">Click on "Add new item"</label>
+                  <input type="checkbox" id="add-new" />
+                </div>
+                <div>
+                  <label for="fill-form">Fill out the information</label>
+                  <input type="checkbox" id="fill-form"/>
+                </div>
+                <div>
+                  <label for="done">Done</label>
+                  <input type="checkbox" id="done" />
+                </div>
+              </div>
+            <!-- </div>  -->
+          </div>
+          <ul class="item-status">
+            <li><input type="checkbox">Not Started</li>
+            <li><i class="fa-solid fa-user"></i>You!</li>
+          </ul>
+        </div>
+        <button class="calendar"><i class="fa-solid fa-calendar-days"></i>
+        </button>
+               
+      </section>
+      <!-- Add new item button -->
+      <button type="submit" class="add-item-btn">Add new item<i class="fa-solid fa-circle-plus fa-lg"></i></button>
+
+      <!-- Create new item -->
+      <section class="create-item hidden">
+        <form action="">
+          <div class="create-item-content">
+            <ul class="left">
+              <li>
+                <label for="name" class="visually-hidden">Item name</label>
+                <input type="text" id="name" name="name" placeholder="Item name" />
+              </li>
+              <li>
+                <label for="description" class="visually-hidden">Description</label>
+                <input
+                type="text"
+                id="description"
+                name="description"
+                placeholder="Description"
+              />
+              </li>
+              <li>
+                <label for="item-1" class="visually-hidden">Checklist item 1</label>
+                <input
+                type="text"
+                id="item-1"
+                name="item-1"
+                placeholder="Checklist item 1"
+              />
+              </li>
+              <li>
+                <label for="new-item" class="visually-hidden">Add another item</label>
+                <input
+                type="text"
+                id="new-item"
+                name="new-item"
+                placeholder="Add another item"
+              />
+              </li>
+            </ul>
+            <ul class="right">
+              <li>
+                <!-- <i class="fa-solid fa-id-badge"></i> -->
+                <i class="fa-solid fa-user"></i>
+                <label for="assign" class="visually-hidden">Assign</label>
+                <input type="text" id="assign" name="assign" placeholder="Assign to..." />
+              </li>
+              <li>
+                <button class="due-date"><i class="fa-solid fa-calendar-days fa-lg"></i></button>
+              </li>
+            </ul>
+          </div>
+          <button type="submit" class="confirm-btn">Confirm Item</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
