@@ -10,7 +10,8 @@
 }
 
 body {
-  background-image: url("../images/background-img.JPG");
+  background-image: url("../images/background-img.png"), linear-gradient(#778487,#778487);
+  background-size: cover;
 }
 
 .header {
@@ -219,7 +220,13 @@ input[type="checkbox"] {
   margin-right: 0.2rem;
 }
 
-h1 {
+#logo {
     font-family: "Handwriting", serif;
     font-size: 3rem;
+    color: #101111;
+}
+
+h2 {
+  font-size: 6rem;
+  font-family: "Handwriting", serif;
 }
