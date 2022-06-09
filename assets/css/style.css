@@ -223,3 +223,18 @@ h1 {
     font-family: "Handwriting", serif;
     font-size: 3rem;
 }
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.simplist-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+}
