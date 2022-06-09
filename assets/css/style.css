@@ -15,7 +15,7 @@ body {
 }
 
 .header {
-  margin: 1rem 1rem;
+  margin: 1.5rem 3rem;
   display: flex;
   justify-content: space-between;
 }
@@ -26,7 +26,11 @@ body {
   gap: 0.5rem;
 }
 
-a:link {
+.header li {
+  padding-left: 3rem;
+}
+
+a {
   text-decoration: none;
   color: #101111;
   font-weight: bold;
