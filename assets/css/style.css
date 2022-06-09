@@ -10,9 +10,7 @@
 }
 
 body {
-  background-image: url("../images/background-img.JPG");
-  /* background-image: linear-gradient(#778487cc, #778487cc),
-    url("../images/background-img.JPG"); */
+  background-image: url("../images/background-img.PNG"), linear-gradient(#778487, #778487);
   min-height: 100vh;
   font-family: "Darker Grotesque", serif;
 }
