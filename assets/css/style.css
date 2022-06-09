@@ -230,6 +230,8 @@ input[type="checkbox"] {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
+  width: 100%;
+  padding-bottom: .5rem;
 }
 
 h2 {
@@ -241,4 +243,32 @@ h3 {
   font-weight: 500;
   font-family: "Darker Grotesque", serif;
   font-size: 2.25rem;
+}
+
+.simplist-button {
+  width: auto;
+  align-self: center;
+  font-family: "Darker Grotesque", serif;
+  font-weight: 900;
+  font-size: 2.5rem;
+  padding: 3px 24px 10px 24px;
+  border-radius: .5rem;
+  background-color: #bfbfbf;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.button-arrow {
+  margin: .5rem 0 0 1rem;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-sub {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
 }
