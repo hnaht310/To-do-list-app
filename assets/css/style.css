@@ -27,9 +27,10 @@ body {
 
 a:link {
   text-decoration: none;
-  color: black;
+  color: #101111;
   font-weight: bold;
-  font-size: 1rem;
+  font-size: 1.5rem;
+  font-family: 'Darker Grotesque', sans-serif;
 }
 
 .search-box {
@@ -216,4 +217,9 @@ main {
 
 input[type="checkbox"] {
   margin-right: 0.2rem;
+}
+
+h1 {
+    font-family: "Handwriting", serif;
+    font-size: 3rem;
 }
