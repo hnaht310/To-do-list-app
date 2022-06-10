@@ -1,0 +1,22 @@
+body {
+  background-image: url("../images/background-img.JPG");
+}
+
+.header {
+  margin: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.row {
+  display: flex; /* default is row */
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.Imagegroup1, 
+.Imagegroup2{
+  width: 100px;
+}
