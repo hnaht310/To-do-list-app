@@ -272,15 +272,6 @@ input[type="text"] {
   font-weight: 900;
 }
 
-<<<<<<< HEAD
-h1 {
-    font-family: "Handwriting", serif;
-    font-size: 3rem;
-}
-.about {
-  color: black;
-}
-=======
 #description {
   font-size: 2.4rem;
   font-weight: 500;
@@ -311,4 +302,3 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   display: none;
   -webkit-appearance: none;
 }
->>>>>>> main
