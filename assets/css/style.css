@@ -9,33 +9,62 @@
   src: url(../fonts/DrewHandwriting2.ttf);
 }
 
-body {
-  background-image: url("../images/background-img.JPG");
+html {
+  /* 62.5% of 16px browser font size  is 10px */
+  font-size: 62.5%;
 }
 
+body {
+  font-family: "Darker Grotesque", sans-serif;
+  /* 16px = 1.6rem */
+  font-size: 1.6rem;
+  min-height: 100vh;
+  background-image: url("../images/background-img.png"),
+    linear-gradient(#778487, #778487);
+}
+
+/* ---------------------- */
+/* NAV BAR */
 .header {
+  color: #101111;
   margin: 1rem 1rem;
   display: flex;
   justify-content: space-between;
 }
 
+h1 {
+  font-family: "Handwriting", sans-serif;
+  font-size: 4.8rem;
+}
+
 .header ul {
   list-style: none;
   display: flex;
-  gap: 0.5rem;
+  gap: 0.8rem;
 }
 
-a:link {
+a {
   text-decoration: none;
   color: #101111;
   font-weight: bold;
-  font-size: 1.5rem;
-  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 2.4rem;
+  font-family: "Darker Grotesque", sans-serif;
 }
 
+/* MAIN */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.4rem;
+}
+
+/* ---------------------- */
+/* SEARCH BOX */
 .search-box {
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
   width: 70vw;
+  color: #212121;
 }
 
 [type="search"]::-webkit-search-cancel-button,
@@ -46,13 +75,13 @@ a:link {
 
 .search-bar {
   position: relative;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 
 .search-bar input {
   width: 100%;
   border: none;
-  padding: 0.75rem 0.5rem;
+  padding: 1.2rem 0.8rem;
 }
 
 .glass-icon {
@@ -62,44 +91,47 @@ a:link {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 0.75rem 0.5rem;
+  padding: 2rem 0.8rem;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
+#item-search {
+  border-radius: 1.3rem;
+  height: 7vh;
+  font-size: 1.5rem;
 }
 
 .tag-group button {
-  background-color: #fff;
-  width: 5rem;
-  height: 2rem;
+  font-size: 1.6rem;
+  background-color: #ffffff;
+  height: 4rem;
+  text-align: center;
   border: none;
-  border-radius: 1.5rem;
+  border-radius: 2rem;
+  padding: 0 2rem;
   margin-right: 0.5rem;
 }
 
 #plus-btn {
-  cursor: pointer;
+  font-size: 2rem;
+  color: #ffffff;
+  background-color: #9fbe6b;
+  text-align: center;
   border: none;
   border-radius: 50%;
-  width: 2rem;
-  height: 2rem;
-  font-size: 1rem;
-  color: white;
-  background-color: #9fbe6b;
+  cursor: pointer;
 }
 
+/* ---------------------- */
+/* INTRO */
 .intro {
   width: 70vw;
   height: auto;
-  background-color: #fff;
-  border-radius: 0.5rem;
+  color: #212121;
+  background-color: #ffffff;
+  border-radius: 1.3rem;
   position: relative;
-  padding: 1rem;
-  line-height: 1.7rem;
+  padding: 1.6rem;
+  line-height: 2.7rem;
 }
 
 .container {
@@ -108,56 +140,76 @@ main {
   flex-wrap: wrap;
 }
 
+h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 0.32rem;
+}
+
 .item-status {
   list-style: none;
   margin-right: 4rem;
 }
 
 .item-status li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
 }
 .item-status input {
   margin-left: 0;
 }
 
 .fa-user {
-  margin-right: 0.2rem;
+  margin-right: 0.32rem;
 }
 
 .calendar {
   background-color: #9fbe6b;
-  width: 1.5rem;
-  height: 1.5rem;
+  width: 3rem;
+  height: 3rem;
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 1.5rem;
-  left: -1.5rem;
+  top: 2.4rem;
+  left: -3rem;
 }
 
 .calendar .fa-calendar-days {
-  color: white;
+  color: #ffffff;
 }
 
 .details {
   width: 70%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
+/* ---------------------- */
+/* CREATE NEW ITEM */
 .add-item-btn,
 .confirm-btn {
   width: 70vw;
-  height: 5vh;
-  border-radius: 0.4rem;
+  height: 7vh;
+  border-radius: 1.3rem;
   border: none;
   cursor: pointer;
+  color: #373737;
   background-color: #bfbfbf;
-  font-size: 1rem;
+  font-size: 1.6rem;
   font-weight: bold;
 }
 
+.confirm-btn {
+  margin-bottom: 3.2rem;
+}
 .fa-circle-plus {
-  margin-left: 0.3rem;
+  margin-left: 0.48rem;
 }
 
 .create-item {
@@ -166,14 +218,14 @@ main {
 
 .create-item-content {
   width: 70vw;
-  background-color: #fff;
-  border-radius: 0.5rem;
-  padding: 1rem;
+  background-color: #ffffff;
+  border-radius: 1.3rem;
+  padding: 1.6rem;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
   flex-wrap: wrap;
-  line-height: 1.7rem;
+  line-height: 2.7rem;
 }
 
 .left,
@@ -183,7 +235,7 @@ main {
 
 .left {
   width: 70%;
-  margin-bottom: 1rem;
+  margin-bottom: 1.6rem;
 }
 
 .left input {
@@ -200,25 +252,27 @@ main {
 }
 
 .right {
-  padding-top: 0.5rem;
+  padding-top: 0.8rem;
 }
 
 .left input,
 .right input {
   border: none;
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid #bfbfbf;
 }
 
-.due-date {
-  background-color: #fff;
-  border: none;
-  cursor: pointer;
+input[type="text"] {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.6rem;
+  color: #757575;
 }
 
-input[type="checkbox"] {
-  margin-right: 0.2rem;
+#name {
+  font-size: 4rem;
+  font-weight: 900;
 }
 
+<<<<<<< HEAD
 h1 {
     font-family: "Handwriting", serif;
     font-size: 3rem;
@@ -226,3 +280,35 @@ h1 {
 .about {
   color: black;
 }
+=======
+#description {
+  font-size: 2.4rem;
+  font-weight: 500;
+}
+
+#item-1 {
+  font-weight: 700;
+}
+
+#new-item {
+  font-weight: 400;
+  color: #a8a8a9;
+}
+
+#assign {
+  width: 60%;
+}
+
+#deadline {
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.6rem;
+  width: 60%;
+  color: #757575;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+  display: none;
+  -webkit-appearance: none;
+}
+>>>>>>> main
