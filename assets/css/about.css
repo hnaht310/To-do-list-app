@@ -46,10 +46,24 @@ body {
   text-align: center;
 }
 
-.Imagegroup1, 
-.Imagegroup2{
+.Imagegroup1 {
   width: 100px;
+
 }
+
+.Imagegroup2 {
+  width: 100px;
+
+}
+
+.NameTag1 {
+  padding-top: 101px;
+}
+
+.NameTag2 {
+  padding-top: 65px;
+}
+
 
 
 /* Get Started for free button */
