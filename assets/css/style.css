@@ -1,7 +1,5 @@
 * {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 @font-face {
@@ -18,7 +16,7 @@ body {
   font-family: "Darker Grotesque", sans-serif;
   /* 16px = 1.6rem */
   font-size: 1.6rem;
-  min-height: 100vh;
+  background-size: cover;
   background-image: url("../images/background-img.png"),
     linear-gradient(#778487, #778487);
 }
@@ -32,7 +30,7 @@ body {
   justify-content: space-between;
 }
 
-h1 {
+#logo {
   font-family: "Handwriting", sans-serif;
   font-size: 4.8rem;
 }
