@@ -4,14 +4,28 @@
   src: url(../fonts/DrewHandwriting2.ttf);
 }
 
-/*Nav Bar */
+/*Nav Bar (Npte: Delete "About Button and Replace)*/
 #navBarLogo {
   font-family: "Handwriting", sans-serif;
-  font-size: 4.8rem;
+  font-size: 2.4rem;
+}
+
+.header ul {
+  list-style: none;
+  display: flex;
+  gap: 0.8rem;
+}
+
+li {
+  text-decoration: none;
+  color: #101111;
+  font-weight: bold;
+  font-size: 2.4rem;
+  font-family: "Darker Grotesque", sans-serif;
 }
 
 /* Header */
-header {
+title {
   color: #101111;
   margin: 1rem 1rem;
   display: flex;
@@ -28,13 +42,22 @@ main {
 
 /*Body*/
 body {
-  background-image: url("../images/background-img.JPG");
+  min-height: 100vh;
+  background-image: url("../images/background-img.png"),
+    linear-gradient(#778487, #778487);
 }
 
 #founderbio {
   font-size: 1.45em;
+  font-family: "Darker Grotesque", sans-serif;
+  color: #101111;
 }
 
+/* Page title */
+.title {
+  font-size: 96px;
+  font-family: "Handwriting", sans-serif;
+}
 /*Used for images and name tags */
 .row {
   display: flex; /* default is row */
@@ -61,11 +84,17 @@ body {
 .NameTag1 {
   padding-top: 101px;
   padding-bottom: 15px;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 24px;
+  color: #101111;
 }
 
 .NameTag2 {
   padding-bottom: 15px;
   padding-top: 86px;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 24px;
+  color: #101111;
 }
 
 
@@ -73,7 +102,7 @@ body {
 /* Get Started for free button */
 .button {
   font-size: 2.5rem;
-  font-family: "Darker Grotesque";
+  font-family: "Darker Grotesque", sans-serif;
   text-align: center;
   margin: 0 auto;
   display: block;
@@ -85,6 +114,6 @@ body {
   color: #373737;
   background-color: #bfbfbf;
   font: "Darker Grotesque";
-  font-size: 1.6rem;
+  font-size: 40px;
   font-weight: bold;
 }
