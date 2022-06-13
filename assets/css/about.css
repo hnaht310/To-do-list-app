@@ -38,7 +38,9 @@ body {
 /*Used for images and name tags */
 .row {
   display: flex; /* default is row */
-  justify-content: center;
+  justify-content: space-around;
+  margin-right: 299px;
+  margin-left: 299px;
 }
 .column {
   display: flex;
@@ -58,10 +60,12 @@ body {
 
 .NameTag1 {
   padding-top: 101px;
+  padding-bottom: 15px;
 }
 
 .NameTag2 {
-  padding-top: 65px;
+  padding-bottom: 15px;
+  padding-top: 86px;
 }
 
 
@@ -73,4 +77,14 @@ body {
   text-align: center;
   margin: 0 auto;
   display: block;
+  width: 519px; 
+  height: 67px;
+  border-radius: 1.3rem;
+  border: none;
+  cursor: pointer;
+  color: #373737;
+  background-color: #bfbfbf;
+  font: "Darker Grotesque";
+  font-size: 1.6rem;
+  font-weight: bold;
 }
