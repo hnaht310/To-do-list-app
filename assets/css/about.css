@@ -1,3 +1,9 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 /* fonts */
 @font-face {
   font-family: "Handwriting";
@@ -5,9 +11,15 @@
 }
 
 /*Nav Bar (Npte: Delete "About Button and Replace)*/
+.header {
+  color: #101111;
+  margin: 1rem 1rem;
+  display: flex;
+  justify-content: space-between;
+}
 #navBarLogo {
   font-family: "Handwriting", sans-serif;
-  font-size: 2.4rem;
+  font-size: 48px;
 }
 
 .header ul {
@@ -20,8 +32,13 @@ li {
   text-decoration: none;
   color: #101111;
   font-weight: bold;
-  font-size: 2.4rem;
+  font-size: 24px;
   font-family: "Darker Grotesque", sans-serif;
+}
+a {
+  text-decoration: none;
+  color: #101111;
+  cursor: pointer;
 }
 
 /* Header */
@@ -29,7 +46,7 @@ title {
   color: #101111;
   margin: 1rem 1rem;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 /* Main */
