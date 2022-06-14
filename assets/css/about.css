@@ -3,6 +3,7 @@
 #founderbio {
   font-size: 2.4rem;
   width: 54.8rem;
+  text-align: justify;
 }
 
 /*Used for images and name tags */
@@ -30,4 +31,8 @@
   text-align: center;
   margin: 0 auto;
   display: block;
+}
+
+.negative-top {
+  margin-top: -8rem;
 }

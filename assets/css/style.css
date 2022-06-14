@@ -25,7 +25,7 @@ body {
 /* NAV BAR */
 .header {
   color: #101111;
-  margin: 1rem 1rem;
+  margin: 2.4rem 4.8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -41,6 +41,10 @@ body {
   list-style: none;
   display: flex;
   gap: 0.8rem;
+}
+
+.header li {
+  padding-left: 4.8rem;
 }
 
 a {
