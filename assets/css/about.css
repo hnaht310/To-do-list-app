@@ -1,38 +1,8 @@
-/* fonts */
-@font-face {
-  font-family: "Handwriting";
-  src: url(../fonts/DrewHandwriting2.ttf);
-}
-
-/*Nav Bar */
-#navBarLogo {
-  font-family: "Handwriting", sans-serif;
-  font-size: 4.8rem;
-}
-
-/* Header */
-header {
-  color: #101111;
-  margin: 1rem 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-/* Main */
-main {
-  text-align: justify;
-  padding-right: 345px;
-  padding-left: 345px;
-  padding-bottom: 47px;
-}
 
 /*Body*/
-body {
-  background-image: url("../images/background-img.JPG");
-}
-
 #founderbio {
-  font-size: 1.45em;
+  font-size: 2.4rem;
+  width: 54.8rem;
 }
 
 /*Used for images and name tags */
@@ -41,13 +11,14 @@ body {
   justify-content: center;
 }
 .column {
+  margin: 1.6rem;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  align-items: center;
+  width: 25rem;
 }
 
-.Imagegroup1, 
-.Imagegroup2{
+.Imagegroup {
   width: 100px;
 }
 
