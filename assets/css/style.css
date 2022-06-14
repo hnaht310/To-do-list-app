@@ -28,11 +28,13 @@ body {
   margin: 1rem 1rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #logo {
   font-family: "Handwriting", sans-serif;
   font-size: 4.8rem;
+  font-weight: 500;
 }
 
 .header ul {
@@ -55,6 +57,45 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 2.4rem;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+h2 {
+  font-size: 9.6rem;
+  font-family: 'Handwriting', serif;
+  font-weight: 500;
+}
+
+h3 {
+  color: #212121;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 5.4rem;
+}
+
+p {
+  font-size: 2.4rem;
+  margin-bottom: 1.6rem;
+}
+
+/* HERO */
+.card-display {
+  display: flex;
+  align-items: center;
+}
+
+.card {
+  margin: .8rem 3.2rem 4rem 3.2rem;
+  width: 70%;
+}
+
+.arrows {
+  height: min-content;
+  width: min-content;
 }
 
 /* ---------------------- */
@@ -99,24 +140,26 @@ main {
 }
 
 .tag-group button {
-  font-size: 1.6rem;
   background-color: #ffffff;
-  height: 4rem;
-  text-align: center;
   border: none;
   border-radius: 2rem;
+  font-size: 1.6rem;
+  height: 4.2rem;
+  margin-right: 0.8rem;
   padding: 0 2rem;
-  margin-right: 0.5rem;
+  text-align: center;  
 }
 
 #plus-btn {
-  font-size: 2rem;
-  color: #ffffff;
   background-color: #9fbe6b;
-  text-align: center;
-  border: none;
-  border-radius: 50%;
+  border-radius: 100%;
+  color: #ffffff;
   cursor: pointer;
+  font-size: 3.2rem;
+  height: 4.2rem;
+  padding: .1rem 0 0 .1rem;
+  text-align: center;
+  width: 4.2rem;   
 }
 
 /* ---------------------- */
@@ -128,7 +171,7 @@ main {
   background-color: #ffffff;
   border-radius: 1.3rem;
   position: relative;
-  padding: 1.6rem;
+  padding: 1.6rem 2.4rem;
   line-height: 2.7rem;
 }
 
@@ -136,16 +179,6 @@ main {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-}
-
-h2 {
-  font-size: 4rem;
-  margin-bottom: 1rem;
-}
-
-p {
-  font-size: 2.4rem;
-  margin-bottom: 1.6rem;
 }
 
 input[type="checkbox"] {
@@ -170,17 +203,26 @@ input[type="checkbox"] {
 
 .calendar {
   background-color: #9fbe6b;
+  border: none;
+  border-radius: .4rem;
   width: 3rem;
   height: 3rem;
-  border: none;
   cursor: pointer;
   position: absolute;
   top: 2.4rem;
   left: -3rem;
+  transition-duration: .4s;
+}
+
+.calendar:hover {
+  width: 10rem;
+  left: -10rem;
+  transition-duration: .4s;
 }
 
 .calendar .fa-calendar-days {
   color: #ffffff;
+  display: flex;
 }
 
 .details {
@@ -193,8 +235,8 @@ input[type="checkbox"] {
 .add-item-btn,
 .confirm-btn {
   width: 70vw;
-  height: 7vh;
-  border-radius: 1.3rem;
+  height: 4rem;
+  border-radius: .8rem;
   border: none;
   cursor: pointer;
   color: #373737;
