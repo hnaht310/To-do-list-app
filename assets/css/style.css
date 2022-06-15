@@ -132,7 +132,58 @@ p {
   padding: 0;
 }
 
-/* ---------------------- */
+.simplist-button {
+  display: flex;
+  padding: .2rem 2.4rem .8rem 2.4rem;
+  width: max-content;
+  align-items: center;
+  border-radius: .8rem;
+  border: none;
+  background-color: #bfbfbf;
+}
+
+.button-arrow {
+  padding-left: .8rem;
+}
+
+/* ABOUT */
+
+#founderbio {
+  font-size: 2.4rem;
+  width: 54.8rem;
+  text-align: justify;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+}
+
+.column {
+  margin: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25rem;
+}
+
+.Imagegroup {
+  width: 100px;
+}
+
+.started-btn {
+  margin: 4.8rem auto;
+  display: block;
+  background-color: #bfbfbf;
+  border: none;
+  padding: .2rem 9.8rem .8rem;
+  border-radius: .8rem;
+}
+
+.negative-top {
+  margin-top: -8rem;
+}
+
 /* SEARCH BOX */
 .search-box {
   margin-bottom: 1.6rem;
@@ -147,24 +198,21 @@ p {
 }
 
 .search-bar {
-  position: relative;
+  display: flex;
   margin-bottom: 0.8rem;
 }
 
 .search-bar input {
   width: 100%;
   border: none;
-  padding: 1.2rem 0.8rem;
+  padding-left: 2.4rem;
 }
 
 .glass-icon {
   border: none;
   cursor: pointer;
   background: transparent;
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 2rem 0.8rem;
+  margin-left: -5.6rem;
 }
 
 #item-search {
@@ -268,7 +316,7 @@ input[type="checkbox"] {
 /* CREATE NEW ITEM */
 .add-item-btn,
 .confirm-btn {
-  width: 70vw;
+  width: 81.6rem;
   height: 4rem;
   border-radius: .8rem;
   border: none;
@@ -291,7 +339,7 @@ input[type="checkbox"] {
 }
 
 .create-item-content {
-  width: 70vw;
+  width: 81.6rem;
   background-color: #ffffff;
   border-radius: 1.3rem;
   padding: 1.6rem;
