@@ -29,12 +29,6 @@ body {
   align-items: center;
 }
 
-#logo {
-  font-family: "Handwriting", sans-serif;
-  font-size: 4.8rem;
-  font-weight: 500;
-}
-
 .header ul {
   list-style: none;
   display: flex;
@@ -60,6 +54,13 @@ a:hover {
 }
 
 #active-page {
+  opacity: 100%;
+}
+
+#logo {
+  font-family: "Handwriting", sans-serif;
+  font-size: 4.8rem;
+  font-weight: 500;
   opacity: 100%;
 }
 
