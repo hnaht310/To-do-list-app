@@ -14,15 +14,13 @@ html {
 
 body {
   font-family: "Darker Grotesque", sans-serif;
-  /* 16px = 1.6rem */
   font-size: 1.6rem;
   background-size: cover;
   background-image: url("../images/background-img.png"),
     linear-gradient(#778487, #778487);
 }
 
-/* ---------------------- */
-/* NAV BAR */
+/* ------------ NAV BAR ------------ */
 .header {
   color: #101111;
   margin: 2.4rem 4.8rem;
@@ -53,9 +51,19 @@ a {
   font-weight: bold;
   font-size: 2.4rem;
   font-family: "Darker Grotesque", sans-serif;
+  opacity: 54%;
 }
 
-/* MAIN */
+a:hover {
+  opacity: 100%;
+  transition: .3s;
+}
+
+#active-page {
+  opacity: 100%;
+}
+
+/* ------------ MAIN ------------ */
 main {
   display: flex;
   flex-direction: column;
@@ -93,7 +101,7 @@ p {
   margin-bottom: 1.6rem;
 }
 
-/* HERO */
+/* ------------ HERO ------------ */
 .branding {
   display: flex;
   align-items: flex-end;
@@ -146,7 +154,7 @@ p {
   padding-left: .8rem;
 }
 
-/* ABOUT */
+/* ------------ ABOUT ------------ */
 
 #founderbio {
   font-size: 2.4rem;
@@ -184,7 +192,7 @@ p {
   margin-top: -8rem;
 }
 
-/* SEARCH BOX */
+/* ------------ SEARCH BOX ------------ */
 .search-box {
   margin-bottom: 1.6rem;
   width: 70vw;
@@ -216,9 +224,16 @@ p {
 }
 
 #item-search {
-  border-radius: 1.3rem;
-  height: 7vh;
-  font-size: 1.5rem;
+  border-radius: .8rem;
+  height: 5.8rem;
+  font-size: 2.4rem;
+  font-family: 'Darker Grotesque', sans-serif;
+  font-weight: 600;
+}
+
+.tag-group {
+  display: flex;
+  margin-top: 1.6rem;
 }
 
 .tag-group button {
@@ -241,11 +256,10 @@ p {
   height: 4.2rem;
   padding: .1rem 0 0 .1rem;
   text-align: center;
-  width: 4.2rem;   
+  width: 4.2rem;
 }
 
-/* ---------------------- */
-/* INTRO */
+/* ------------ INTRO ------------ */
 .intro {
   width: 81.6rem;
   height: auto;
@@ -312,8 +326,7 @@ input[type="checkbox"] {
   margin-bottom: 1.6rem;
 }
 
-/* ---------------------- */
-/* CREATE NEW ITEM */
+/* ------------ CREATE NEW ITEM ------------ */
 .add-item-btn,
 .confirm-btn {
   width: 81.6rem;
