@@ -9,69 +9,62 @@
     <!--  Links for Grotesque Font  -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <!--Emoji Link-->
     <script src="https://kit.fontawesome.com/27eb42d559.js" crossorigin="anonymous"></script>
 
-    <link href="assets/css/about.css" rel="stylesheet">
+    <!-- Styles -->
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
     <title>Simplist | About</title>
-
-
 </head>
 
 <body>
+    <!-- Navbar -->
     <nav class="header">
-        <h1 id="navBarLogo">Simplist</h1>
+        <h1><a href="index.html" id="logo">Simplist</a></h1>
         <ul>
-            <li><a href="./app.html">App</a></li>
-            <li><a href="#">About</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="app.html">App</a></li>
+          <li><a href="#" id="active-page">About</a></li>
         </ul>
     </nav>
+
     <main>
         <div class="header">
-            <img class="Larrows" src="assets/images/Arrows.png">
+            <img class="arrows" src="assets/images/Arrows.png">
             <h2>About Simplist</h2>
-            <img class="Rarrows" src="assets/images/Arrows.png">
+            <img class="arrows flip" src="assets/images/Arrows.png">
         </div>
 
-        <h3>An extension of your brain</h3>
+        <h4 class="negative-top">An extension of your brain</h4>
         
-        <p id="founderbio">When our founders Henok Gebeyehu, Henry Rosales, LV Nereus, Niara Johnson, Thanh Pham, and Zainab Ibrahim,
-            began working on the
-            idea that eventually became Simplist, they recognized four things the human brain needs to do on a regular
-            basis: to get
-            its life together, to have fun, to remember that thing its mother told it to do that one Saturday after the
-            family party,
-            and to create new ideas for the future. We hope you enjoy this app as much as we do! <i
-                class="fa-solid fa-face-smile-wink"></i></p>
+        <p id="founderbio">When our founders Henok Gebeyehu, Henry Rosales, LV Nereus, Niara Johnson, Thanh Pham, and Zainab Ibrahim, began working on the idea that eventually became Simplist, they recognized four things the human brain needs to do on a regular basis: to get its life together, to have fun, to remember that thing its mother told it to do that one Saturday after the family party, and to create new ideas for the future. We hope you enjoy this app as much as we do! <i class="fa-solid fa-face-smile-wink"></i></p>
     </main>
 
     <!--"Get Started for Free" Button-->
-    <button type="button" class="button">Get Started for Free</button>
+    <button type="button" class="started-btn"><h3>Get Started for Free</h3></button>
 
-    <!--Portfolio Images (I need to add Thahn's image) Use FlexBox for spacing-->
+    <!-- Portfolio Images -->
     <div>
 
         <div class="row">
 
             <div class="column">
-                <a>Thanh Pham</a>
-                <img class="Imagegroup2" id="ThanhPham" src="./assets/images/Circle Images/Thanh.png" alt="Image of Thanh Pham" />
+                <a href="https://github.com/hnaht310" target="_blank">Thanh Pham</a>
+                <img class="Imagegroup" id="ThanhPham" src="./assets/images/Circle Images/Thanh.png" alt="Image of Thanh Pham" />
             </div>
 
             <div class="column">
-                <a>Henry Rosales</a>
-                <img class="Imagegroup1" id="HenryRosales" src="./assets/images/Circle Images/Henry.png"
-                    alt="Image of Henry Rosales" />
+                <a href="https://www.linkedin.com/in/henrmj/" target="_blank">Henry Rosales</a>
+                <img class="Imagegroup" id="HenryRosales" src="./assets/images/Circle Images/Henry.png" alt="Image of Henry Rosales" />
             </div>
 
             <div class="column">
-                <a>LV Nereus</a>
-                <img class="Imagegroup1" id="LVNereus" src="./assets/images/Circle Images/LV.png"
-                    alt="Image of LV Nereus" />
+                <a href="https://www.linkedin.com/in/lv-nereus/" target="_blank">LV Nereus</a>
+                <img class="Imagegroup" id="LVNereus" src="./assets/images/Circle Images/LV.png" alt="Image of LV Nereus" />
             </div>
 
         </div>
@@ -81,21 +74,18 @@
         <div class="row">
 
             <div class="column">
-                <a>Niara Johnson</a>
-                <img class="Imagegroup2" id="NiaraJohnson" src="./assets/images/Circle Images/Niara.png"
-                    alt="Image of Niara Johnson" />
+                <a href="https://www.linkedin.com/in/niarajohnson/" target="_blank">Niara Johnson</a>
+                <img class="Imagegroup" id="NiaraJohnson" src="./assets/images/Circle Images/Niara.png" alt="Image of Niara Johnson" />
             </div>
 
             <div class="column">
-                <a>Henok Gebeyehu</a>
-                <img class="Imagegroup2" id="HenokGebeyehu" src="./assets/images/Circle Images/Henok.png"
-                    alt="Image of Henok Gebeyehu" />
+                <a href="https://www.linkedin.com/in/henok-gebeyehu-9754372a/" target="_blank">Henok Gebeyehu</a>
+                <img class="Imagegroup" id="HenokGebeyehu" src="./assets/images/Circle Images/Henok.png" alt="Image of Henok Gebeyehu" />
             </div>
 
             <div class="column">
-                <a>Zainab Ibrahim</a>
-                <img class="Imagegroup2" id="ZainabIbrahim" src="./assets/images/Circle Images/Zainab.png"
-                    alt="Image of Zainab Ibrahim" />
+                <a href="https://www.linkedin.com/in/zainab-kumbassa-ibrahim-442201123/" target="_blank">Zainab Ibrahim</a>
+                <img class="Imagegroup" id="ZainabIbrahim" src="./assets/images/Circle Images/Zainab.png" alt="Image of Zainab Ibrahim" />
             </div>
 
         </div>
