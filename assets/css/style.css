@@ -112,11 +112,6 @@ p {
   padding: 1.6rem;
 }
 
-.card-display {
-  display: flex;
-  align-items: center;
-}
-
 .card {
   margin: .8rem 0 4rem 0;
   width: 70%;
