@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,53 +10,77 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 
-        <!-- Styling -->
-        <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Styling -->
+    <link href="assets/css/reset.css" rel="stylesheet">
+    <link href="assets/css/style.css" rel="stylesheet">
 
+    <!-- Font Awesome CDN -->
+    <script src="https://kit.fontawesome.com/439320a6ee.js" crossorigin="anonymous"></script>
 
     <title>Simplist</title>
-</head>
-<body>
+  </head>
+  <body>
     <!--Nav bar-->
     <nav class="header">
-        <h1>Simplist</h1>
+        <h1><a href="index.html" id="logo">Simplist</a></h1>
         <ul>
-          <li><a href="#">App</a></li>
-          <li><a href="#">About</a></li>
+          <li><a href="#" id="active-page">Home</a></li>
+          <li><a href="app.html">App</a></li>
+          <li><a href="about.html">About</a></li>
         </ul>
-      </nav>
+    </nav>
 
-        <!--Brand name & tagline-->
-        <div class="brand-tag">
-            <h2>
-                Simplist
-            </h2>
-            <br>
+    <main>
+      <!--Brand name & tagline-->
+      <section class="hero">
+        <div class="branding">
+          <h2>Simplist</h2>
+          <h4 class="hero-sub">A better <u>todo</u> list</h4>
         </div>
-        <h4 class="tagline">
-            A better to-do list
-        </h4>
-
+        
         <!--Card-->
-        <div class="card">
-           
-            <img src="assets/images/Simplist.png">
+        <div class="card-display">
+          <div class="card">
+            <section class="intro hidden">
+              <img class="home-position arrows" src="assets/images/Arrows.png">
+              <div class="container">
+                <div class="details">
+                  <h3>The best todo app in the world!</h3>
+                  <!-- <div class="steps"> -->
+                  <p>Start using the best to-do web app in the world by clicking the button below!</p>
+                  <div class="checkbox-list">
+                    <div>
+                      <input type="checkbox" id="add-new" />
+                      <label for="add-new">Click on "Add new item"</label>
+                    </div>
 
-        </div>
+                    <div>
+                      <input type="checkbox" id="fill-form"/>
+                      <label for="fill-form">Fill out the information</label>
+                    </div>
 
-        <!--Button-->
+                    <div>
+                      <input type="checkbox" id="done" />
+                      <label for="done">Done</label>
+                    </div>
+                  </div>
+                </div>
 
-        <div class="simplist-button">
+                <ul class="item-status">
+                  <li><input type="checkbox">Not Started</li>
+                  <li><i class="fa-solid fa-user"></i>You!</li>
+                </ul>
+              </div>   
+              <img class="home-position arrows flip" src="assets/images/Arrows.png">
+            </section>      
+          </div>
+        </div>        
+      </section>
 
-        <button onclick="">
-            Make things Simplier
-    
-        </button>
-    
-        </div>
+      <button onclick="" class="simplist-button">
+        <h3>Make things Simplier</h3> <img class="button-arrow" src="assets/images/dotted-arrow.png">
+      </button>
 
-
-    
-    
-</body>
+    </main>
+  </body>
 </html>
