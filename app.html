@@ -28,7 +28,7 @@
         <li><a href="#" id="active-page">App</a></li>
         <li><a href="about.html">About</a></li>
       </ul>
-  </nav>
+    </nav>
 
     <!-- Main -->
     <main>
@@ -56,38 +56,35 @@
       </section>
 
       <!-- Intro section -->
-      <section class="intro hidden">
-        <div class="container">
+      <section class="card hidden">
+        <div class="card-container">
           <div class="details">
             <h3>Create your first item!</h3>
-              <p>
-                  You're one step closer to making the <strong>simplist</strong> todo list you've ever
-                  made! First click the add icon below
-              </p>
-              <div class="checkbox-list">
-                <div>
-                  <input type="checkbox" id="add-new" />
-                  <label for="add-new">Click on "Add new item"</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="fill-form"/>
-                  <label for="fill-form">Fill out the information</label>
-                </div>
-                <div>
-                  <input type="checkbox" id="done" />
-                  <label for="done">Done</label>
-                </div>
+            <p>You're one step closer to making the <strong>simplist</strong> todo list you've ever
+            made! First click the add icon below</p>
+            <div class="checkbox-list">
+              <div>
+                <input type="checkbox" id="add-new" />
+                <label for="add-new">Click on "Add new item"</label>
               </div>
+              <div>
+                <input type="checkbox" id="fill-form"/>
+                <label for="fill-form">Fill out the information</label>
+              </div>
+              <div>
+                <input type="checkbox" id="done" />
+                <label for="done">Done</label>
+              </div>
+            </div>
           </div>
           <ul class="item-status">
             <li><input type="checkbox">Not Started</li>
             <li><i class="fa-solid fa-user"></i>You!</li>
           </ul>
         </div>
-        <button class="calendar"><i class="fa-solid fa-calendar-days fa-lg"></i>
-        </button>
-               
+        <button class="calendar"><i class="fa-solid fa-calendar-days fa-lg"></i></button>
       </section>
+
       <!-- Add new item button -->
       <button type="submit" class="add-item-btn">Add new item<i class="fa-solid fa-circle-plus fa-lg"></i></button>
 
@@ -130,7 +127,6 @@
             </ul>
             <ul class="right">
               <li>
-                <!-- <i class="fa-solid fa-id-badge"></i> -->
                 <i class="fa-solid fa-user"></i>
                 <label for="assign" class="visually-hidden">Assign</label>
                 <input type="text" id="assign" name="assign" placeholder="Assign to..." />
