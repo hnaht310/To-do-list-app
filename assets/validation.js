@@ -25,7 +25,7 @@ const resetErrors = () => {
     dateError.innerText = '';
 }
 
-const validate = () => {
+export const validate = () => {
     let isValid = true;
 
     resetErrors();

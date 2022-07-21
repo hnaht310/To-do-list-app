@@ -1,4 +1,4 @@
-const newTaskForm = document.querySelector('.confirm-btn');
+const newTaskForm = document.querySelector('#new-task-form');
 
 newTaskForm.addEventListener('submit', (event) => {
   event.preventDefault();
