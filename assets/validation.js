@@ -12,9 +12,10 @@ const assignError = document.querySelector("#assign-error");
 const dateError = document.querySelector("#deadline-error");
 
 // Min and max values for validation
-const _NAME_MAX;
-const _DESCRIPTION_MAX;
-const _ITEM_MAX;
+const _NAME_MAX = 40;
+const _DESCRIPTION_MAX = 175;
+const _ITEM_MAX = 82;
+const _ASSIGN_MAX = 70;
 
 // This resets all the error messages so only new errors will populate
 const resetErrors = () => {
@@ -31,35 +32,48 @@ export const validate = () => {
     resetErrors();
 
     // Required valdiation for name field
-    if (nameField.innerText.length == 0) {
+    if (nameField.value.length == 0) {
         nameError.innerHTML = "Required Field";
         isValid = false;
     }
 
     // Max character length valdiation for name field
-    if (nameField.innerText.length > _NAME_MAX) {
+    if (nameField.value.length > _NAME_MAX) {
         nameError.innerHTML = `Too long. Max character length is ${_NAME_MAX}`;
         isValid = false;
     }
 
     // Max character length valdiation for description field
-    if (descriptionField.innerText.length > _DESCRIPTION_MAX) {
+    if (descriptionField.value.length > _DESCRIPTION_MAX) {
         descriptionError.innerHTML = `Too long. Max character length is ${_DESCRIPTION_MAX}`;
         isValid = false;
     }
 
     // Required validation for checkbox field
-    if (itemField.innerText.length == 0) {
+    if (itemField.value.length == 0) {
         itemError.innerHTML = "Required Field";
         isValid = false;
     }
 
     // Max character length validation for item field
-    if (itemField.innerText.length > _ITEM_MAX) {
+    if (itemField.value.length > _ITEM_MAX) {
         itemField.innerHTML = `Too long. Max character length is ${_ITEM_MAX}`;
         isValid = false;
     }
 
+    // Required valdiation for assign field
+    if (assignField.value.length == 0) {
+        assignError.innerHTML = `Required Field`
+        isValid = false;
+    }
+
+    // Max character length validation for assign field
+    if (assignField.value.length > _ASSIGN_MAX) {
+        assignError.innerHTML = `Too long. Max character length is ${_ASSIGN_MAX}`;
+        isValid = false;
+    }
+
+    if (dateField.value)
     
     return isValid;
 }
