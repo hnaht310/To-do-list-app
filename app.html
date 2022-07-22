@@ -87,7 +87,6 @@
 
       <!-- Add new item button -->
       <button type="submit" class="add-item-btn">Add new item<i class="fa-solid fa-circle-plus fa-lg"></i></button>
-      <p class="errorFonts">Max. 170 characters</p>
 
       <!-- Create new item -->
       <section class="create-item hidden">
@@ -98,6 +97,11 @@
                 <label for="name" class="visually-hidden">Item name</label>
                 <input type="text" id="name" name="name" placeholder="Item name" />
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts">Min. 1 characters</p>
+              <p class="errorFonts">Max. 40 characters</p>
+
               <li>
                 <label for="description" class="visually-hidden">Description</label>
                 <input
@@ -107,6 +111,11 @@
                 placeholder="Description"
                 />
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts">Min. 1 characters</p>
+              <p class="errorFonts">Max. 175 characters</p>
+
               <li>
                 <label for="item-1" class="visually-hidden">Checklist item 1</label>
                 <input
@@ -116,6 +125,11 @@
                 placeholder="Checklist item 1"
                 />
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts">Min. 1 characters</p>
+              <p class="errorFonts">Max. 82 characters</p>
+
               <li>
                 <label for="new-item" class="visually-hidden">Add another item</label>
                 <input
@@ -125,6 +139,11 @@
                 placeholder="Add another item"
                 />
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts">Min. 1 characters</p>
+              <p class="errorFonts">Max. 82 characters</p>
+
             </ul>
             <ul class="right">
               <li>
@@ -132,11 +151,20 @@
                 <label for="assign" class="visually-hidden">Assign</label>
                 <input type="text" id="assign" name="assign" placeholder="Assign to..." />
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts">Min. 1 characters</p>
+              <p class="errorFonts">Max. 70 characters</p>
+
               <li>
                 <i class="fa-solid fa-calendar-days fa-lg"></i>
                 <label for="" class="visually-hidden">Deadline</label>
                 <input type="date" name="deadline" id="deadline">
               </li>
+              <!--Error Notice-->
+              <p class="errorFonts">Format XX/XX/XXXX</p>
+              <p class="errorFonts">Numbers only</p>
+
             </ul>
           </div>
           <button type="submit" class="confirm-btn">Confirm Item</button>
