@@ -99,9 +99,8 @@
               </li>
 
               <!--Error Notice-->
-              <p class="errorFonts">Min. 1 characters</p>
-              <p class="errorFonts">Max. 40 characters</p>
-
+              <p class="errorFonts" id="name-error"></p>
+              
               <li>
                 <label for="description" class="visually-hidden">Description</label>
                 <input
@@ -113,8 +112,7 @@
               </li>
 
               <!--Error Notice-->
-              <p class="errorFonts">Min. 1 characters</p>
-              <p class="errorFonts">Max. 175 characters</p>
+              <p class="errorFonts" id="description-error"></p>
 
               <li>
                 <label for="item-1" class="visually-hidden">Checklist item 1</label>
@@ -127,8 +125,7 @@
               </li>
 
               <!--Error Notice-->
-              <p class="errorFonts">Min. 1 characters</p>
-              <p class="errorFonts">Max. 82 characters</p>
+              <p class="errorFonts" id="new-item-error"></p>
 
               <li>
                 <label for="new-item" class="visually-hidden">Add another item</label>
@@ -139,11 +136,6 @@
                 placeholder="Add another item"
                 />
               </li>
-
-              <!--Error Notice-->
-              <p class="errorFonts">Min. 1 characters</p>
-              <p class="errorFonts">Max. 82 characters</p>
-
             </ul>
             <ul class="right">
               <li>
@@ -153,18 +145,17 @@
               </li>
 
               <!--Error Notice-->
-              <p class="errorFonts">Min. 1 characters</p>
-              <p class="errorFonts">Max. 70 characters</p>
+              <p class="errorFonts" id="assign-error"></p>
 
               <li>
                 <i class="fa-solid fa-calendar-days fa-lg"></i>
                 <label for="" class="visually-hidden">Deadline</label>
                 <input type="date" name="deadline" id="deadline">
               </li>
-              <!--Error Notice-->
-              <p class="errorFonts">Format XX/XX/XXXX</p>
-              <p class="errorFonts">Numbers only</p>
 
+              <!--Error Notice-->
+              <p class="errorFonts" id="deadline-error"></p>
+              
             </ul>
           </div>
           <button type="submit" class="confirm-btn">Confirm Item</button>
