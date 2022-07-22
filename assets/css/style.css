@@ -434,4 +434,5 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 .errorFonts {
   font-family: ;
+  color: #F8380E;
 }
