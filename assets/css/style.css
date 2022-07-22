@@ -433,6 +433,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Error Messages */
 
 .errorFonts {
-  font-family: ;
   color: #F8380E;
+  font-family: "Darker Grotesque", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
 }
