@@ -1,3 +1,4 @@
+// Query Selector for form fields
 const nameField = document.querySelector("#name");
 const descriptionField = document.querySelector("#description");
 const itemField = document.querySelector("#item-1");
@@ -39,12 +40,13 @@ const getCurrentDate = () => {
     const currentDate = new Date();
 
     currentYear = currentDate.getFullYear();
-    currentMonth = currentDate.getMonth() + 1;
+    currentMonth = currentDate.getMonth() + 1; // starts counting at 0
     currentDay = currentDate.getDate();
 }
 
+// Turns user input from string into an integar
 const parseDateFromValue = date => {
-    inputYear = parseInt(date);
+    inputYear = parseInt(date); // stops parsing at first NaN
     inputMonth = parseInt((date[5] + date[6]));
     inputDay = parseInt((date[8] + date[9]));
 }
@@ -54,7 +56,7 @@ const noTimeTravel = () => {
     if (inputYear > currentYear) { 
         return true; 
     }
-    
+
     if (inputMonth > currentMonth 
         && inputYear == currentYear) { 
 
@@ -66,10 +68,10 @@ const noTimeTravel = () => {
         return true; 
     }
 
-
     return false;
 }
 
+// Checks entire form for validation
 export const validate = () => {
     let isValid = true;
 
@@ -118,6 +120,8 @@ export const validate = () => {
         isValid = false;
     } 
 
+    // This validation is first because if we put it after line 133-139
+    // it will always say the error is "Date cannot be set to the past"
     parseDateFromValue(dateField.value);
 
     if (!noTimeTravel()) {
