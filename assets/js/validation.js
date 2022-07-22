@@ -86,13 +86,13 @@ export const validate = () => {
 
     // Max character length valdiation for name field
     if (nameField.value.length > _NAME_MAX) {
-        nameError.innerHTML = `Too long. Max character length is ${_NAME_MAX}`;
+        nameError.innerHTML = `${nameField.value.length} characters. Max character length is ${_NAME_MAX}`;
         isValid = false;
     }
 
     // Max character length valdiation for description field
     if (descriptionField.value.length > _DESCRIPTION_MAX) {
-        descriptionError.innerHTML = `Too long. Max character length is ${_DESCRIPTION_MAX}`;
+        descriptionError.innerHTML = `${descriptionField.value.length} characters. Max character length is ${_DESCRIPTION_MAX}`;
         isValid = false;
     }
 
@@ -104,7 +104,7 @@ export const validate = () => {
 
     // Max character length validation for item field
     if (itemField.value.length > _ITEM_MAX) {
-        itemField.innerHTML = `Too long. Max character length is ${_ITEM_MAX}`;
+        itemError.innerHTML = `${itemField.value.length} characters. Max character length is ${_ITEM_MAX}`;
         isValid = false;
     }
 
