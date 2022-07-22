@@ -97,6 +97,10 @@
                 <label for="name" class="visually-hidden">Item name</label>
                 <input type="text" id="name" name="name" placeholder="Item name" />
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts" id="name-error"></p>
+
               <li>
                 <label for="description" class="visually-hidden">Description</label>
                 <input
@@ -106,6 +110,10 @@
                 placeholder="Description"
                 />
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts" id="description-error"></p>
+
               <li>
                 <label for="item-1" class="visually-hidden">Checklist item 1</label>
                 <input
@@ -115,6 +123,10 @@
                 placeholder="Checklist item 1"
                 />
               </li>
+
+               <!--Error Notice-->
+              <p class="errorFonts" id="new-item-error"></p>
+
               <li>
                 <label for="new-item" class="visually-hidden">Add another item</label>
                 <input
@@ -123,7 +135,7 @@
                 name="new-item"
                 placeholder="Add another item"
                 />
-              </li>
+              </li>          
             </ul>
             <ul class="right">
               <li>
@@ -131,11 +143,19 @@
                 <label for="assign" class="visually-hidden">Assign</label>
                 <input type="text" id="assign" name="assign" placeholder="Assign to..." />
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts" id="assign-error"></p>
+
               <li>
                 <i class="fa-solid fa-calendar-days fa-lg"></i>
                 <label for="" class="visually-hidden">Deadline</label>
                 <input type="date" name="deadline" id="deadline">
               </li>
+
+              <!--Error Notice-->
+              <p class="errorFonts" id="deadline-error"></p>
+
             </ul>
           </div>
           <button type="submit" class="confirm-btn">Confirm Item</button>
