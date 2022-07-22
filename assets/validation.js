@@ -72,8 +72,6 @@ export const validate = () => {
         assignError.innerHTML = `Too long. Max character length is ${_ASSIGN_MAX}`;
         isValid = false;
     }
-
-    if (dateField.value)
     
     return isValid;
 }
