@@ -75,6 +75,10 @@ main {
   transform: rotate(180deg);
 }
 
+.hidden {
+  display: none;
+}
+
 h2 {
   font-size: 9.6rem;
   font-family: 'Handwriting', serif;

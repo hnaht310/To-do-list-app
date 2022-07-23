@@ -17,6 +17,8 @@
     <link href="assets/css/reset.css" rel="stylesheet">
     <link href="assets/css/style.css" rel="stylesheet">
 
+    <script type="module" src="assets/js/index.js" defer></script>
+
     <title>Simplist | App</title>
   </head>
   <body>
@@ -56,7 +58,7 @@
       </section>
 
       <!-- Intro section -->
-      <section class="card hidden">
+      <section class="card">
         <div class="card-container">
           <div class="details">
             <h3>Create your first item!</h3>
@@ -86,11 +88,11 @@
       </section>
 
       <!-- Add new item button -->
-      <button type="submit" class="add-item-btn">Add new item<i class="fa-solid fa-circle-plus fa-lg"></i></button>
+      <button class="add-item-btn" id="new-item-btn">Add new item<i class="fa-solid fa-circle-plus fa-lg"></i></button>
 
       <!-- Create new item -->
-      <section class="create-item hidden">
-        <form action="">
+      <section class="create-item hidden" data-newform>
+        <form action="" id="new-task-form">
           <div class="create-item-content">
             <ul class="left">
               <li>
