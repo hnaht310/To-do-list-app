@@ -16,6 +16,5 @@ export class TaskManager {
     };
     // Push new task to tasks array
     this.tasks.push(task);
-    console.log(this.tasks);
   }
 }

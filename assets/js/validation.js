@@ -27,7 +27,7 @@ let inputMonth;
 let inputDay;
 
 // This resets all the error messages so only new errors will populate
-const resetErrors = () => {
+const resetErrorMessages = () => {
     nameError.innerText = '';
     descriptionError.innerText = '';
     itemError.innerText = '';
@@ -35,39 +35,35 @@ const resetErrors = () => {
     dateError.innerText = '';
 }
 
-// Generates the current date
+// Gets current date to compare against user input date for validation
 const getCurrentDate = () => {
     const currentDate = new Date();
 
     currentYear = currentDate.getFullYear();
-    currentMonth = currentDate.getMonth() + 1; // starts counting at 0
+
+    // getMonth() starts at 0 so we add 1
+    currentMonth = currentDate.getMonth() + 1;
     currentDay = currentDate.getDate();
 }
 
-// Turns user input from string into an integar
+// Turns user input from string into an integar for comparison validation
 const parseDateFromValue = date => {
-    inputYear = parseInt(date); // stops parsing at first NaN
+
+    // stops parsing at first NaN
+    inputYear = parseInt(date);
     inputMonth = parseInt((date[5] + date[6]));
     inputDay = parseInt((date[8] + date[9]));
 }
 
 // Prevents user from inputing date before current date
 const noTimeTravel = () => {
-    if (inputYear > currentYear) { 
-        return true; 
-    }
+    if (inputYear > currentYear) return true;
 
-    if (inputMonth > currentMonth 
-        && inputYear == currentYear) { 
-
-        return true; 
+    if (inputYear == currentYear) {
+        if (inputMonth > currentMonth) return true;
+        if (inputDay >= currentDay && inputMonth == currentMonth) return true;
     }
-    if (inputDay >= currentDay 
-        && inputMonth == currentMonth 
-        && inputYear == currentYear) {
-        return true; 
-    }
-
+    
     return false;
 }
 
@@ -75,11 +71,11 @@ const noTimeTravel = () => {
 export const validate = () => {
     let isValid = true;
 
-    resetErrors();
+    resetErrorMessages();
     getCurrentDate();
 
     // Required valdiation for name field
-    if (nameField.value.length == 0) {
+    if (!nameField.value) {
         nameError.innerHTML = "Required Field";
         isValid = false;
     }
@@ -97,7 +93,7 @@ export const validate = () => {
     }
 
     // Required validation for checkbox field
-    if (itemField.value.length == 0) {
+    if (!itemField.value) {
         itemError.innerHTML = "Required Field";
         isValid = false;
     }
@@ -109,7 +105,7 @@ export const validate = () => {
     }
 
     // Required valdiation for assign field
-    if (assignField.value.length == 0) {
+    if (!assignField.value) {
         assignError.innerHTML = `Required Field`;
         isValid = false;
     }
@@ -120,7 +116,7 @@ export const validate = () => {
         isValid = false;
     } 
 
-    // This validation is first because if we put it after line 133-139
+    // This validation is first because if we put it after line 128-138
     // it will always say the error is "Date cannot be set to the past"
     parseDateFromValue(dateField.value);
 
@@ -130,7 +126,7 @@ export const validate = () => {
     }
 
     // Required and valid input length validation for date
-    if (dateField.value.length == 0) {
+    if (!dateField.value) {
         dateError.innerHTML = 'Required Field';
         isValid = false;
     } else if (dateField.value.length != 10) {
