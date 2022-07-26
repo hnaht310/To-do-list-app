@@ -38,6 +38,7 @@ newTaskForm.addEventListener('submit', (event) => {
   // If the form passes valdiation it will create the object pass it into TaskManager
   if (validate()){
     taskManager.addTask(name, description, item1, assignedTo, dueDate, "Not Started");
+    taskManager.render();
     newTaskForm.reset();
     toggleForm();
   }
