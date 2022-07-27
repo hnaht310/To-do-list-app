@@ -7,11 +7,11 @@ const createTaskHtml = (name, description, item1, assignedTo, dueDate, status) =
         <p>${description}</p>
         <div class="checkbox-list">
           <div>
-            <input type="checkbox" id="add-new" />
+            <input type="checkbox" class="add-new" />
             <label for="add-new">${item1}</label>
           </div>
           <div>
-            <input type="checkbox" id="done" />
+            <input type="checkbox" class="done" />
             <label for="done">Done</label>
           </div>
         </div>
@@ -65,3 +65,11 @@ export class TaskManager {
   }
 }
 
+const taskList = document.querySelector('#tasks-list');
+
+taskList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('done')) {
+    console.log(event.target.parentElement.parentElement.parentElement.parentElement.getElementsByTagName('ul'));
+    event.target.closest('ul > li')
+  }
+})
