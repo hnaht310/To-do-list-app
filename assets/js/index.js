@@ -45,8 +45,6 @@ newTaskForm.addEventListener('submit', (event) => {
   }
 });
 
-
-
 taskList.addEventListener('click', (event) => {
   if (event.target.classList.contains('done')) {
     let status = event.target.parentElement.parentElement.parentElement.parentElement.getElementsByTagName('ul')[0].getElementsByTagName('li')[0];
