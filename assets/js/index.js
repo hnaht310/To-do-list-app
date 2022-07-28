@@ -5,6 +5,7 @@ import { TaskManager } from "./taskManager.js";
 const newTaskForm = document.querySelector('#new-task-form');
 const newItemButton = document.querySelector('#new-item-btn');
 const newItemForm = document.querySelector('[data-newform]');
+const taskList = document.querySelector('#tasks-list');
 
 // Creating the TaskManager object
 const taskManager = new TaskManager;
@@ -43,3 +44,24 @@ newTaskForm.addEventListener('submit', (event) => {
     toggleForm();
   }
 });
+
+
+
+taskList.addEventListener('click', (event) => {
+  if (event.target.classList.contains('done')) {
+    let status = event.target.parentElement.parentElement.parentElement.parentElement.getElementsByTagName('ul')[0].getElementsByTagName('li')[0];
+
+    let taskId = event.target.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.id;
+
+    let task = taskManager.getTaskById(taskId);
+    console.log(task);
+
+    if (event.target.checked){
+      status.innerText = 'Completed';
+      task.status = 'Completed';
+    } else {
+      status.innerText = 'Not Started';
+      task.status = 'Not Started';
+    }
+  }
+})
