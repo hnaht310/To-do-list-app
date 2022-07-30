@@ -43,3 +43,11 @@ newTaskForm.addEventListener('submit', (event) => {
     toggleForm();
   }
 });
+const tasksList= document.querySelector('#tasks-list')
+tasksList.addEventListener('click', (event) => {
+if(event.target.classList.contains('done')) {
+  const parentTask = event.target.parentElement.parentElement.parentElement.parentElement.getElementsByClassName('item-status')[0].firstChild.innerHTML;
+  
+  console.log(parentTask);
+}
+});

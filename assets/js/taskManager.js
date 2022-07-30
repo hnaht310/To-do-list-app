@@ -7,11 +7,11 @@ const createTaskHtml = (name, description, item1, assignedTo, dueDate, status) =
         <p>${description}</p>
         <div class="checkbox-list">
           <div>
-            <input type="checkbox" id="add-new" />
+            <input type="checkbox" class="add-new" />
             <label for="add-new">${item1}</label>
           </div>
           <div>
-            <input type="checkbox" id="done" />
+            <input type="checkbox" class="done" />
             <label for="done">Done</label>
           </div>
         </div>
