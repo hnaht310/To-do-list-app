@@ -1,6 +1,6 @@
-const createTaskHtml = (name, description, item1, assignedTo, dueDate, status) => {
+const createTaskHtml = (name, description, item1, assignedTo, dueDate, status, id) => {
   const html = `
-  <section class="card">
+  <section class="card" data-id='${id}'>
     <div class="card-container">
       <div class="details">
         <h3>${name}</h3>
@@ -17,7 +17,7 @@ const createTaskHtml = (name, description, item1, assignedTo, dueDate, status) =
         </div>
       </div>
       <ul class="item-status">
-        <li><input type="checkbox">${status}</li>
+        <li>${status}</li>
         <li><i class="fa-solid fa-user"></i>${assignedTo}</li>
       </ul>
     </div>
@@ -47,6 +47,18 @@ export class TaskManager {
     this.tasks.push(task);
   }
 
+  getTaskById(taskId) {
+    let foundTask;
+
+    this.tasks.forEach(task => {
+      if (task.id == taskId) {
+        foundTask = task;
+      }
+    });
+
+    return foundTask;
+  }
+
   render() {
     const tasksHtmlList = [];
 
@@ -55,7 +67,7 @@ export class TaskManager {
       const date = new Date(this.tasks[i].dueDate);
       const formattedDate = date.toDateString();
       const taskHtml = createTaskHtml(currentTask.name, currentTask.description, 
-      currentTask.item1, currentTask.assignedTo, formattedDate, currentTask.status);
+      currentTask.item1, currentTask.assignedTo, formattedDate, currentTask.status, currentTask.id);
   
       tasksHtmlList.push(taskHtml);
     }
@@ -64,4 +76,3 @@ export class TaskManager {
     document.getElementById('tasks-list').innerHTML = tasksHtml;
   }
 }
-
