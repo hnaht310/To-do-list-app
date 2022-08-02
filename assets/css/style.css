@@ -3,7 +3,7 @@
 }
 
 @font-face {
-  font-family: "Handwriting";
+  font-family: 'Handwriting';
   src: url(../fonts/DrewHandwriting2.ttf);
 }
 
@@ -12,10 +12,10 @@ html {
 }
 
 body {
-  background-image: url("../images/background-img.png"),
+  background-image: url('../images/background-img.png'),
     linear-gradient(#778487, #778487);
   background-size: cover;
-  font-family: "Darker Grotesque", sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.6rem;
 }
 
@@ -25,7 +25,7 @@ body {
   color: #101111;
   display: flex;
   justify-content: space-between;
-  margin: 2.4rem 4.8rem; 
+  margin: 2.4rem 4.8rem;
 }
 
 .header ul {
@@ -40,16 +40,16 @@ body {
 
 a {
   color: #101111;
-  font-family: "Darker Grotesque", sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
   font-size: 2.4rem;
   font-weight: bold;
   opacity: 54%;
-  text-decoration: none;  
+  text-decoration: none;
 }
 
 a:hover {
   opacity: 100%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 #active-page {
@@ -57,7 +57,7 @@ a:hover {
 }
 
 #logo {
-  font-family: "Handwriting", sans-serif;
+  font-family: 'Handwriting', sans-serif;
   font-size: 4.8rem;
   font-weight: 500;
   opacity: 100%;
@@ -124,7 +124,7 @@ p {
 .home-position {
   left: -15rem;
   padding: 0;
-  position: absolute;  
+  position: absolute;
   top: 4rem;
 }
 
@@ -138,14 +138,14 @@ p {
   align-items: center;
   background-color: #bfbfbf;
   border: none;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   display: flex;
-  padding: .2rem 2.4rem .8rem 2.4rem;
+  padding: 0.2rem 2.4rem 0.8rem 2.4rem;
   width: max-content;
 }
 
 .button-arrow {
-  padding-left: .8rem;
+  padding-left: 0.8rem;
 }
 
 /* ------------ ABOUT ------------ */
@@ -164,7 +164,7 @@ p {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin: 1.6rem;  
+  margin: 1.6rem;
   width: 25rem;
 }
 
@@ -175,10 +175,10 @@ p {
 .started-btn {
   background-color: #bfbfbf;
   border: none;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   display: block;
-  margin: 4.8rem auto;  
-  padding: .2rem 9.8rem .8rem;
+  margin: 4.8rem auto;
+  padding: 0.2rem 9.8rem 0.8rem;
 }
 
 .negative-top {
@@ -192,8 +192,8 @@ p {
   width: 70vw;
 }
 
-[type="search"]::-webkit-search-cancel-button,
-[type="search"]::-webkit-search-decoration {
+[type='search']::-webkit-search-cancel-button,
+[type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
   appearance: none;
 }
@@ -204,7 +204,7 @@ p {
 }
 
 .search-bar input {
-  border: none;  
+  border: none;
   padding-left: 2.4rem;
   width: 100%;
 }
@@ -217,7 +217,7 @@ p {
 }
 
 #item-search {
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   font-family: 'Darker Grotesque', sans-serif;
   font-size: 2.4rem;
   font-weight: 600;
@@ -237,7 +237,7 @@ p {
   height: 4.2rem;
   margin-right: 0.8rem;
   padding: 0 2rem;
-  text-align: center;  
+  text-align: center;
 }
 
 #plus-btn {
@@ -247,7 +247,7 @@ p {
   cursor: pointer;
   font-size: 3.2rem;
   height: 4.2rem;
-  padding: .1rem 0 0 .1rem;
+  padding: 0.1rem 0 0 0.1rem;
   text-align: center;
   width: 4.2rem;
 }
@@ -261,7 +261,8 @@ p {
   line-height: 2.7rem;
   padding: 1.6rem 2.4rem;
   position: relative;
-  width: 81.6rem;  
+  width: 81.6rem;
+  margin-bottom: 0.8rem;
 }
 
 .card-container {
@@ -270,7 +271,7 @@ p {
   justify-content: space-between;
 }
 
-input[type="checkbox"] {
+input[type='checkbox'] {
   margin-right: 0.32rem;
 }
 
@@ -293,19 +294,19 @@ input[type="checkbox"] {
 .calendar {
   background-color: #9fbe6b;
   border: none;
-  border-radius: .4rem 0 0 .4rem;
+  border-radius: 0.4rem 0 0 0.4rem;
   cursor: pointer;
   height: 3rem;
   left: -3rem;
   position: absolute;
   top: 2.4rem;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
   width: 3rem;
 }
 
 .calendar:hover {
   left: -10rem;
-  transition-duration: .4s;
+  transition-duration: 0.4s;
   width: 10rem;
 }
 
@@ -324,7 +325,7 @@ input[type="checkbox"] {
 .confirm-btn {
   background-color: #bfbfbf;
   border: none;
-  border-radius: .8rem;
+  border-radius: 0.8rem;
   color: #373737;
   cursor: pointer;
   font-size: 1.6rem;
@@ -389,9 +390,9 @@ input[type="checkbox"] {
   border-bottom: 1px solid #bfbfbf;
 }
 
-input[type="text"] {
+input[type='text'] {
   color: #757575;
-  font-family: "Darker Grotesque", sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.6rem;
 }
 
@@ -420,13 +421,13 @@ input[type="text"] {
 
 #deadline {
   color: #757575;
-  font-family: "Darker Grotesque", sans-serif;
+  font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.6rem;
   width: 60%;
 }
 
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
+input[type='date']::-webkit-inner-spin-button,
+input[type='date']::-webkit-calendar-picker-indicator {
   -webkit-appearance: none;
   display: none;
 }
@@ -434,8 +435,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 /* Error Messages */
 
 .errorFonts {
-  color: #F8380E;
-  font-family: "Darker Grotesque", sans-serif;
+  color: #f8380e;
+  font-family: 'Darker Grotesque', sans-serif;
   font-size: 1.6rem;
   font-weight: 700;
 }
