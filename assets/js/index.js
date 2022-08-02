@@ -7,6 +7,9 @@ const newItemButton = document.querySelector('#new-item-btn');
 const newItemForm = document.querySelector('[data-newform]');
 const taskList = document.querySelector('#tasks-list');
 
+// Global timeout so we can cancel it
+let timeOutDate;
+
 // Creating the TaskManager object
 const taskManager = new TaskManager();
 
@@ -86,17 +89,15 @@ taskList.addEventListener('mouseover', (event) => {
     const formattedDate = date.toDateString();
     
     // Updates the date after a set amount of time
-    var updateDate = setTimeout(() => {
-      event.target.innerHTML = `${formattedDate}`
+    timeOutDate = setTimeout(() => {
+      event.target.innerHTML = `${formattedDate}`;
     }, 250);
+  }
+});
 
-    taskList.addEventListener('mouseout', (event) => {
-      if (event.target.classList.contains('calendar')) {
-        clearTimeout(updateDate);
-        event.target.innerHTML = `<i class="fa-solid fa-calendar-days fa-lg"></i>`;
-      }
-    });
-
-    taskList.removeEventListener('mouseout', event.target, true);
+taskList.addEventListener('mouseout', (event) => {
+  if (event.target.classList.contains('calendar')) {
+    clearTimeout(timeOutDate);
+    event.target.innerHTML = `<i class="fa-solid fa-calendar-days fa-lg"></i>`;
   }
 });
