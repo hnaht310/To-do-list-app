@@ -1,4 +1,12 @@
-const createTaskHtml = (name, description, item1, assignedTo, dueDate, status, id) => {
+const createTaskHtml = (
+  name,
+  description,
+  item1,
+  assignedTo,
+  dueDate,
+  status,
+  id
+) => {
   const html = `
   <section class="card" data-id='${id}'>
     <div class="card-container">
@@ -25,7 +33,7 @@ const createTaskHtml = (name, description, item1, assignedTo, dueDate, status, i
   </section> `;
 
   return html;
-}
+};
 
 export class TaskManager {
   constructor(currentId = 0) {
@@ -41,7 +49,7 @@ export class TaskManager {
       item1,
       assignedTo,
       dueDate,
-      status
+      status,
     };
     // Push new task to tasks array
     this.tasks.push(task);
@@ -50,8 +58,8 @@ export class TaskManager {
   getTaskById(taskId) {
     let foundTask;
 
-    this.tasks.forEach(task => {
-      if (task.id == taskId) {
+    this.tasks.forEach((task) => {
+      if (task.id === parseInt(taskId)) {
         foundTask = task;
       }
     });
@@ -66,13 +74,44 @@ export class TaskManager {
       const currentTask = this.tasks[i];
       const date = new Date(this.tasks[i].dueDate);
       const formattedDate = date.toDateString();
-      const taskHtml = createTaskHtml(currentTask.name, currentTask.description, 
-      currentTask.item1, currentTask.assignedTo, formattedDate, currentTask.status, currentTask.id);
-  
+      const taskHtml = createTaskHtml(
+        currentTask.name,
+        currentTask.description,
+        currentTask.item1,
+        currentTask.assignedTo,
+        formattedDate,
+        currentTask.status,
+        currentTask.id
+      );
+
       tasksHtmlList.push(taskHtml);
     }
-    
+
     const tasksHtml = tasksHtmlList.join('\n');
     document.getElementById('tasks-list').innerHTML = tasksHtml;
+  }
+
+  save() {
+    // create a JSON string
+    const tasksJson = JSON.stringify(this.tasks);
+    // store the JSON string in localStorage
+    localStorage.setItem('tasks', tasksJson);
+
+    const currentId = this.currentId.toString();
+    localStorage.setItem('currentId', currentId);
+  }
+
+  load() {
+    // get the JSON string of tasks stored in localStorage
+    if (localStorage.getItem('tasks')) {
+      const tasksJson = localStorage.getItem('tasks');
+      // convert tasksJson string to an array
+      this.tasks = JSON.parse(tasksJson);
+    }
+
+    if (localStorage.getItem('currentId')) {
+      const currentId = localStorage.getItem('currentId');
+      this.currentId = JSON.parse(currentId);
+    }
   }
 }
