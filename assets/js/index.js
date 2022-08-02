@@ -50,6 +50,8 @@ newTaskForm.addEventListener('submit', (event) => {
       dueDate,
       'Not Started'
     );
+
+    taskManager.save();
     taskManager.render();
     newTaskForm.reset();
     toggleForm();
@@ -65,8 +67,6 @@ taskList.addEventListener('click', (event) => {
 
     let task = taskManager.getTaskById(taskId);
 
-    console.log(task);
-
     if (event.target.checked) {
       status.innerText = 'Completed';
       task.status = 'Completed';
@@ -74,6 +74,29 @@ taskList.addEventListener('click', (event) => {
       status.innerText = 'Not Started';
       task.status = 'Not Started';
     }
-    taskManager.save();
+  }
+});
+
+taskList.addEventListener('mouseover', (event) => {
+  if (event.target.classList.contains('calendar')) {
+    let taskId = event.target.closest('.card').dataset.id;
+    let taskDue = taskManager.getTaskById(taskId).dueDate;
+
+    const date = new Date(taskDue);
+    const formattedDate = date.toDateString();
+    
+    // Updates the date after a set amount of time
+    var updateDate = setTimeout(() => {
+      event.target.innerHTML = `${formattedDate}`
+    }, 250);
+
+    taskList.addEventListener('mouseout', (event) => {
+      if (event.target.classList.contains('calendar')) {
+        clearTimeout(updateDate);
+        event.target.innerHTML = `<i class="fa-solid fa-calendar-days fa-lg"></i>`;
+      }
+    });
+
+    taskList.removeEventListener('mouseout', event.target, true);
   }
 });
