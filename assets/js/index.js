@@ -1,5 +1,5 @@
-import { validate } from "./validation.js";
-import { TaskManager } from "./taskManager.js";
+import { validate } from './validation.js';
+import { TaskManager } from './taskManager.js';
 
 // Grabbing elements from HTML
 const newTaskForm = document.querySelector('#new-task-form');
@@ -8,13 +8,17 @@ const newItemForm = document.querySelector('[data-newform]');
 const taskList = document.querySelector('#tasks-list');
 
 // Creating the TaskManager object
-const taskManager = new TaskManager;
+const taskManager = new TaskManager();
+
+// load the tasks and render them
+taskManager.load();
+taskManager.render();
 
 // Toggles hidden elements
 const toggleForm = () => {
   newItemButton.classList.toggle('hidden');
   newItemForm.classList.toggle('hidden');
-}
+};
 
 // Opens new item form
 newItemButton.addEventListener('click', toggleForm);
@@ -36,9 +40,16 @@ newTaskForm.addEventListener('submit', (event) => {
   const assignedTo = newTaskAssignedTo.value;
   const dueDate = newTaskDueDate.value;
 
-  // If the form passes valdiation it will create the object pass it into TaskManager
-  if (validate()){
-    taskManager.addTask(name, description, item1, assignedTo, dueDate, "Not Started");
+  // If the form passes validation it will create the object pass it into TaskManager
+  if (validate()) {
+    taskManager.addTask(
+      name,
+      description,
+      item1,
+      assignedTo,
+      dueDate,
+      'Not Started'
+    );
     taskManager.render();
     newTaskForm.reset();
     toggleForm();
@@ -54,23 +65,24 @@ if(event.target.classList.contains('done')) {
 }
 });
 
-
-
 taskList.addEventListener('click', (event) => {
   if (event.target.classList.contains('done')) {
-    let status = event.target.parentElement.parentElement.parentElement.parentElement.getElementsByTagName('ul')[0].getElementsByTagName('li')[0];
+    let status =
+      event.target.closest('.details').nextElementSibling.firstElementChild;
 
-    let taskId = event.target.parentElement.parentElement.parentElement.parentElement.parentElement.dataset.id;
+    let taskId = event.target.closest('.card').dataset.id;
 
     let task = taskManager.getTaskById(taskId);
+
     console.log(task);
 
-    if (event.target.checked){
+    if (event.target.checked) {
       status.innerText = 'Completed';
       task.status = 'Completed';
     } else {
       status.innerText = 'Not Started';
       task.status = 'Not Started';
     }
+    taskManager.save();
   }
-}
+
