@@ -85,7 +85,8 @@ taskList.addEventListener('mouseover', (event) => {
     let taskId = event.target.closest('.card').dataset.id;
     let taskDue = taskManager.getTaskById(taskId).dueDate;
 
-    const date = new Date(taskDue);
+    const date = new Date(`${taskDue}T00:00`);
+    console.log(date);
     const formattedDate = date.toDateString();
     
     // Updates the date after a set amount of time
@@ -94,7 +95,6 @@ taskList.addEventListener('mouseover', (event) => {
     }, 250);
   }
 });
-
 taskList.addEventListener('mouseout', (event) => {
   if (event.target.classList.contains('calendar')) {
     clearTimeout(timeOutDate);
