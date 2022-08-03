@@ -295,6 +295,7 @@ input[type='checkbox'] {
   background-color: #9fbe6b;
   border: none;
   border-radius: 0.4rem 0 0 0.4rem;
+  color: white;
   cursor: pointer;
   height: 3rem;
   left: -3rem;
@@ -305,9 +306,9 @@ input[type='checkbox'] {
 }
 
 .calendar:hover {
-  left: -10rem;
+  left: -12rem;
   transition-duration: 0.4s;
-  width: 10rem;
+  width: 12rem;
 }
 
 .calendar .fa-calendar-days {

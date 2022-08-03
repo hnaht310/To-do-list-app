@@ -29,7 +29,7 @@ const createTaskHtml = (
         <li><i class="fa-solid fa-user"></i>${assignedTo}</li>
       </ul>
     </div>
-    <button class="calendar"><i class="fa-solid fa-calendar-days fa-lg"></i>${dueDate}</button>
+    <button class="calendar"><i class="fa-solid fa-calendar-days fa-lg"></i></button>
   </section> `;
 
   return html;
