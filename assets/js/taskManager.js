@@ -52,6 +52,7 @@ export class TaskManager {
       dueDate,
       status,
     };
+
     // Push new task to tasks array
     this.tasks.push(task);
   }
@@ -122,3 +123,6 @@ export class TaskManager {
     this.tasks = newTasks;
   }
 }
+
+// uncomment for testing
+// module.exports = TaskManager;

@@ -1,6 +1,7 @@
 import { validate } from './validation.js';
 import { TaskManager } from './taskManager.js';
 
+
 // Grabbing elements from HTML
 const newTaskForm = document.querySelector('#new-task-form');
 const newItemButton = document.querySelector('#new-item-btn');
