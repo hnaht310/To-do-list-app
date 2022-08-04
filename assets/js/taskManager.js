@@ -73,7 +73,7 @@ export class TaskManager {
 
     for (let i = 0; i < this.tasks.length; i++) {
       const currentTask = this.tasks[i];
-      const date = new Date(this.tasks[i].dueDate);
+      const date = new Date(`${this.tasks[i].dueDate}T00:00`);
       const formattedDate = date.toDateString();
       const taskHtml = createTaskHtml(
         currentTask.name,
