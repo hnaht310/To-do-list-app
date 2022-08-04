@@ -29,6 +29,7 @@ const createTaskHtml = (
         <li><i class="fa-solid fa-user"></i>${assignedTo}</li>
       </ul>
     </div>
+    <button class="delete-button">Delete</button>
     <button class="calendar"><i class="fa-solid fa-calendar-days fa-lg"></i></button>
   </section> `;
 
@@ -72,7 +73,7 @@ export class TaskManager {
 
     for (let i = 0; i < this.tasks.length; i++) {
       const currentTask = this.tasks[i];
-      const date = new Date(this.tasks[i].dueDate);
+      const date = new Date(`${this.tasks[i].dueDate}T00:00`);
       const formattedDate = date.toDateString();
       const taskHtml = createTaskHtml(
         currentTask.name,
@@ -113,5 +114,11 @@ export class TaskManager {
       const currentId = localStorage.getItem('currentId');
       this.currentId = JSON.parse(currentId);
     }
+  }
+  deleteTask(taskId) {
+    let newTasks = this.tasks.filter((task) => {
+      return task.id !== parseInt(taskId);
+    });
+    this.tasks = newTasks;
   }
 }

@@ -77,8 +77,19 @@ taskList.addEventListener('click', (event) => {
       status.innerText = 'Not Started';
       task.status = 'Not Started';
     }
+    taskManager.save();
   }
+  if (event.target.classList.contains('delete-button')) {
+    let taskId = event.target.closest('.card').dataset.id;
+    taskManager.deleteTask(taskId);
+    taskManager.save();
+    taskManager.render();
+    console.log(event.target);
+  }
+  console.log(taskManager.currentId);
+  console.log(taskManager.tasks);
 });
+
 
 taskList.addEventListener('mouseover', (event) => {
   if (event.target.classList.contains('calendar')) {
