@@ -1,4 +1,5 @@
-const TaskManager = require('../js/taskManager');
+// tests won't work unless you uncomment this and uncomment the last line in TaskManager.js
+// const TaskManager = require('../js/taskManager');
 
 const tasks = new TaskManager();
 const testArray = tasks.tasks;
